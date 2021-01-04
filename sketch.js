@@ -37,7 +37,7 @@ function setup() {
   bg = createSprite(580,300);
   bg.addImage(bgImage);
   bg.scale =0.5;
-  bg.velocityX = -6;
+  
 
   //create Mario sprite
   mario = createSprite(200,505,20,50);
@@ -63,6 +63,7 @@ function draw() {
   if (gameState==="PLAY"){
     mario.setCollider("rectangle",0,0,200,500);
     mario.scale =0.3;
+    bg.velocityX = -6;
    //scroll background 
   if (bg.x < 100){
     bg.x=bg.width/4;
